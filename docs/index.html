@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space Grotesk">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div>
+        <div class="front">
+          <div>
+            <div class="circleContainer">
+              <div class="circleB"></div>
+              <div class="circleS"></div>
+            </div>
+            <div class="frontNumber" id="frontNumber">
+              1234 1234 1234 1234
+            </div>
+            <div class="name">
+              <div id="frontName">Nombre Apellido</div>
+              <div style="padding-left: 200px;" class="frontDate">
+                <div id="frontMonth">08</div>
+                <div>/</div>
+                <div id="frontYear">20</div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div>
+            <div class="cvc" id="cvcFront">666</div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="rigth">
+      <form action="" class="forms" autocomplete="on" style="display: grid;" id="forms">
+        <label for="cardName">CARDHOLDER NAME</label>
+        <input id="cardName" name="cardName" type="text" placeholder="ej: ANA CAMILA SHELL"  maxlength="20" required style="text-transform:uppercase;"
+        onChange="onChangeName()">
+        <label for="cardNumber">CARD NUMBER</label>
+        <input id="cardNumber" name="cardNumber" type="text" placeholder="ej: 1234 1234 1234 1234" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" maxlength="19" required
+        onChange="onChangeNumber()">
+        <div class="card">
+          <div class="date">
+            <label for="cardDate">EXP. DATE (MM/YY)</label>
+            <input id="cardDateM" name="cardDate" type="text" maxlength="2" placeholder="ej: 05" pattern="[0-9]{2}" min="01" max="12" required onChange="onChangeMonth()">
+            <input id="cardDateY" name="cardDate2" type="text" maxlength="2" placeholder="ej: 12" pattern="[0-9]{2}" required onChange="onChangeYear()">
+          </div>
+          <div style="margin-left: 10px;">
+            <label for="cardCvc">CVC</label>
+            <input id="cardCvc" name="cardCvc" type="text" maxlength="3" placeholder="ej 534" pattern="[0-9]{3}" required style="width: 160px;" onChange="onChangeCVC()">
+          </div>          
+        </div>
+        <button id="buttonAccept" onclick="Accept()">Confirm</button>
+      </form> 
+
+      <div class="reset" id="end" style="display: none;">
+        <div class="ok"></div>
+        <div class="tk">THANK YOU!</div>
+        <div class="note">We've added your card details</div>
+        <div><button type="reset" class="button" id="buttonReset" onclick="Reset()">Continue</button></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+
+</body>
+</html>

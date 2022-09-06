@@ -1,0 +1,291 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Froms*/
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    background-image: url('./images/bg-main-desktop.png');
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+.rigth{
+    height: 100vh;
+    width: 70%;
+}
+
+.forms{
+   /* background-color: blue; */
+   margin-top: 15%;
+   margin-left: 35%;
+   display: block;
+   /* width: 100%; */
+   font-family: 'Space Grotesk', Sans Serif;
+   font-weight: 400;
+   font-size: 18px;
+   
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    
+}
+input{
+    display: block;
+    width: 350px;
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: hsl(249, 64%, 28%);
+}
+
+button{
+    margin-top: 10px;
+    height: 35px;
+    width: 360px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.card input {
+   width: 80px;
+}
+
+.date input{
+    display: inline-flex
+}
+
+/*Visual Cards*/
+
+.front{
+    background-image: url('./images/bg-card-front.png');
+    width: 447px;
+    height: 37%;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.back{
+    background-image: url('./images/bg-card-back.png');
+    width: 447px;
+    height: 37%;
+    margin-top: 50px;
+    margin-left: 160px;
+}
+
+.cvc{
+    padding-top: 25%;
+    margin-left: 340px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+}
+
+.circleContainer{
+    display: flex;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+
+.circleB{
+    background-color: hsl(0, 0%, 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.circleS{
+    background-color: hsl(252, 85%, 60%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);
+    margin-top: 15px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.frontNumber{
+    color: hsl(270, 3%, 87%);
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 30px ;
+    margin-top: 60px;
+    display: block;
+    position:sticky;
+}
+.name{
+    color: hsl(270, 3%, 87%);
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 30px ;
+    margin-top: 30px;
+}
+.frontDate{
+    display: flex;
+    justify-content:center;
+    margin-top: -22px;
+}
+
+
+
+/*Visual Ok*/
+.reset{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20%;
+    font-family: 'Space Grotesk', Sans Serif;
+}
+.ok{
+    background-image: url('./images/ok.jpg');
+    width: 58px;
+    height: 53px;
+    margin-left: 47%;
+    /*grid*/
+}
+.tk{
+    margin-top: 35px;
+    font-weight: 900;
+    color: hsl(278, 68%, 11%);
+}
+.note{
+    margin-top: 20px;
+    color: hsl(279, 6%, 55%);
+}
+.button{
+    color: hsl(270, 3%, 87%);
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .container{
+        display:block;
+        /* flex-direction: column; */
+    }
+    .left{
+        width: 375px;
+        height: 40vh;
+        /* display: block;
+        background-size: cover;
+        background-repeat: no-repeat; */
+    }
+    
+    .back{
+        display: flex;
+        width: 250px;
+        height: 60%;
+        margin-top: -260px;
+        margin-left: 90px;
+        margin-right: -70px;
+        background-size: cover;
+    }
+    .cvc{
+        padding-top: 27%;
+        margin-left: 200px;
+        color: hsl(0, 0%, 100%);
+        font-weight: 400;
+    }
+    .front{
+        background-size: cover;
+        width: 250px;
+        height: 60%;
+        margin-top: 140px;
+        margin-left: 30px;
+        position: relative; 
+    }
+    .circleContainer{
+        display: flex;
+        padding-top: 10px;
+        margin-left: 30px;
+    }    
+    .circleB{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .circleS{
+        width: 10px;
+        height: 10px;
+        margin-top: 10px;
+    }
+    .frontNumber{
+        font-size: 20px;
+        margin-left: 30px ;
+        margin-top: 20px;
+    }
+    .name{
+        font-size: 15px;
+        margin-left: 30px ;
+        margin-top: 20px;
+    }
+    .frontDate{
+        margin-top: -18px;
+        margin-left: -40px;
+        font-size: 15px;
+    }
+
+
+
+
+    .rigth{
+        height:30px;
+        width: 375px;
+    }
+    .forms{
+        margin-left: 10px;
+        display: flex;
+        /* width: 100%; */
+        font-family: 'Space Grotesk', Sans Serif;
+        font-weight: 400;
+        font-size: 18px;
+        
+     }
+     input{
+         display: block;
+         width: 350px;
+         height: 25px;
+         margin-top: 5px;
+         border-radius: 5px;
+         color: hsl(249, 64%, 28%);
+     }
+     
+     button{
+         margin-top: 10px;
+         height: 35px;
+         width: 360px;
+         background-color: hsl(278, 68%, 11%);
+         color: hsl(0, 0%, 100%);
+         border-radius: 5px;
+     }
+     
+     .card {
+         display: flex;
+         flex-direction: row;
+     }
+     
+     .card input {
+        width: 80px;
+     }
+     
+     .date input{
+         display: inline-flex
+     }
+  }
